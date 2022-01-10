@@ -10,8 +10,8 @@
         }
     ];
 
-    const removeTask = (index) => {
-        tasks.splice(index, 1);
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
         render();
     }
 
@@ -22,6 +22,11 @@
 
         render();
     }
+
+    const toggleTaskDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    };
 
     const render = () => {
         let htmlString = "";
@@ -44,7 +49,14 @@
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
                 removeTask(index);
+            })
+        })
 
+        const doneButtons = document.querySelectorAll(".js-doneButton");
+
+        doneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
             })
         })
     }
