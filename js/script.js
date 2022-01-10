@@ -10,18 +10,9 @@
         }
     ];
 
-    const render = () => {
-        let htmlString = "";
-
-        for(const task of tasks) {
-            htmlString += `
-                <li ${task.done ? "class=\"taskList__item--done\"" : "class=\"taskList__item\""}>
-                    ${task.content}
-                </li>
-            `;
-        }
-
-        document.querySelector(".js-taskList").innerHTML = htmlString;
+    const removeTask = (index) => {
+        tasks.splice(index, 1);
+        render();
     }
 
     const addNewTask = (taskContent) => {
@@ -32,12 +23,38 @@
         render();
     }
 
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+                <li ${task.done ? "class=\"taskList__item--done\"" : "class=\"taskList__item\""}>
+                <button class="js-doneButton taskList__button${task.done ? " taskList__button--done\">✓" : "\">"}
+                </button>
+                    ${task.content}
+                <button class="js-removeButton taskList__button taskList__button--trash"></button>
+                </li>
+            `;
+        }
+
+        document.querySelector(".js-taskList").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-removeButton");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+
+            })
+        })
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        
-        if(newTaskContent === ""){
+
+        if (newTaskContent === "") {
             return;
         }
 
