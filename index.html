@@ -24,15 +24,24 @@
     </header>
     <div class="container">
         <form class="form js-form">
-            <legend class="form__title">Dodaj nowe zadanie</legend>
-            <input class="form__task js-newTask" placeholder="Co jest do zrobienia?">
-            <button class="form__submit js-submit">Dodaj zadanie</button>
+            <div class="form__container">
+                <legend class="form__title">Dodaj nowe zadanie</legend>
+            </div>
+            <div class="form__container">
+                <input class="form__task js-newTask" placeholder="Co jest do zrobienia?">
+                <button class="form__submit js-submit">Dodaj zadanie</button>
+            </div>
         </form>
     </div>
     <div class="container">
-        <span class="form__title">Lista zadań</span>
-        <ul class="taskList js-taskList">
-        </ul>
+        <div class="form__container">
+            <span class="form__title">Lista zadań</span>
+        </div>
+        <div class="form__container">
+            <ul class="taskList js-taskList">
+            </ul>
+        </div>
+
     </div>
 
 </body>

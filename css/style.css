@@ -14,9 +14,13 @@ html{
     font-size: larger;
 }
 
+.header__text {
+    margin: 10px;
+    padding-top: 30px;
+}
+
 .container {
     background-color: rgb(255, 255, 255);
-    padding: 15px;
     border: 1px solid black;
     margin: 10px;
 }
@@ -24,4 +28,10 @@ html{
 .form__title {
     font-size: 1.3em;
     font-weight: 700;
+}
+
+.form__container {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgb(201, 201, 201);
 }
