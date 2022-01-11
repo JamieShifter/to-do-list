@@ -23,6 +23,7 @@ html{
 .container {
     background-color: rgb(255, 255, 255);
     margin: 15px;
+    box-shadow: 8px 8px 10px -12px rgba(136, 136, 148, 1);
 }
 
 .form__title {
@@ -65,4 +66,29 @@ html{
 
 .form__submit:active {
     background-color: rgb(44, 202, 202);
+}
+
+.taskList {
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+
+.taskList__item {
+    font-size: 1.1em;
+    padding: 10px;
+    list-style-type: none;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskList__item--done {
+    text-decoration: line-through;
+}
+
+.taskList__text {
+    flex-grow: 1;
+    padding-left: 20px;
+    text-align: left;
 }
