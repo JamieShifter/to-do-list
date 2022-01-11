@@ -83,12 +83,32 @@ html{
     justify-content: space-between;
 }
 
-.taskList__item--done {
-    text-decoration: line-through;
-}
-
 .taskList__text {
     flex-grow: 1;
     padding-left: 20px;
     text-align: left;
+    align-self: center;
 }
+
+.taskList__text--done {
+    text-decoration: line-through;
+}
+
+.taskList__button {
+    min-height: 50px;
+    min-width: 50px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0 20px;
+}
+
+.taskList__button--done {
+    background-color: green;
+}
+
+.taskList__button--trash {
+    background-color: rgb(236, 57, 93);
+}
+
+/* TODO: Fix the sizes of buttons */
