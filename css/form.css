@@ -1,0 +1,41 @@
+.form__title {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.form__container {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.form__container--submit {
+    display: flex;
+
+}
+
+.form__task {
+    flex-grow: 1;
+    margin-right: 20px;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+}
+
+.form__submit {
+    min-height: 50px;
+    background-color: teal;
+    color: white;
+    font-family: inherit;
+    border: none;
+    padding: 0 20px;
+}
+
+.form__submit:hover {
+    background-color: rgb(17, 170, 170);
+}
+
+.form__submit:active {
+    background-color: rgb(44, 202, 202);
+}
