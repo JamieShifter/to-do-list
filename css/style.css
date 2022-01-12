@@ -100,7 +100,6 @@ html{
     background-color: green;
     color: white;
     border: none;
-    padding: 0 20px;
 }
 
 .taskList__button--done {
