@@ -11,7 +11,6 @@
 
 .form__container--submit {
     display: flex;
-
 }
 
 .form__task {
@@ -38,4 +37,21 @@
 
 .form__submit:active {
     background-color: rgb(44, 202, 202);
+}
+
+@media (max-width: 500px) {
+    .form__container--submit {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .form__task {
+        margin: 10px;
+    }
+
+    .form__submit {
+        margin: 10px;
+        padding: 0;
+    }
 }

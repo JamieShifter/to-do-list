@@ -12,6 +12,7 @@ html{
     margin: auto;
     max-width: 1000px;
     font-size: larger;
+    word-break: break-word;
 }
 
 .header__text {
