@@ -9,6 +9,14 @@
     border-bottom: 1px solid rgb(201, 201, 201);
 }
 
+@media (max-width: 767px) {
+    .form__container--submit {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
 .form__container--submit {
     display: flex;
 }
@@ -22,6 +30,12 @@
     border-radius: 5px;
 }
 
+@media (max-width: 767px) {
+    .form__task {
+        margin: 10px;
+    }
+}
+
 .form__submit {
     min-height: 50px;
     background-color: teal;
@@ -29,6 +43,13 @@
     font-family: inherit;
     border: none;
     padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+    .form__submit {
+        margin: 10px;
+        padding: 0;
+    }
 }
 
 .form__submit:hover {
@@ -39,19 +60,3 @@
     background-color: rgb(44, 202, 202);
 }
 
-@media (max-width: 500px) {
-    .form__container--submit {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .form__task {
-        margin: 10px;
-    }
-
-    .form__submit {
-        margin: 10px;
-        padding: 0;
-    }
-}
