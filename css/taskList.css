@@ -46,14 +46,14 @@
 }
 
 .taskList__button--trash {
-    background-color: rgb(236, 57, 93);
+    background-color: rgb(255, 0, 51);
 }
 
 .taskList__button--trash:hover {
-    background-color: rgb(236, 92, 121);
+    background-color: rgb(255, 46, 88);
 }
 
 .taskList__button--trash:active {
-    background-color: rgb(240, 136, 157);
+    background-color: rgb(255, 81, 116);
 }
 
