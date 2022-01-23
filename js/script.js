@@ -1,5 +1,5 @@
 {
-    const tasks = [
+    let tasks = [
         {
             content: "Uprasować ubania",
             done: false,
@@ -11,20 +11,24 @@
     ];
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.filter(task => tasks.indexOf(task) !== taskIndex)
+        ];
+
         render();
     }
 
     const addNewTask = (taskContent) => {
-        tasks.push({
-            content: taskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: taskContent }
+        ];
 
         render();
     }
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks = tasks.map((task, index) => (index === taskIndex) ? ({...task, done: !task.done}) : ({...task}));
         render();
     };
 
