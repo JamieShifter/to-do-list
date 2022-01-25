@@ -1,14 +1,5 @@
 {
-    let tasks = [
-        {
-            content: "Uprasować ubania",
-            done: false,
-        },
-        {
-            content: "Zrobić zakupy",
-            done: true,
-        }
-    ];
+    let tasks = [];
 
     const removeTask = (taskIndex) => {
         tasks = [
@@ -28,7 +19,7 @@
     }
 
     const toggleTaskDone = (taskIndex) => {
-        tasks = tasks.map((task, index) => (index === taskIndex) ? ({...task, done: !task.done}) : ({...task}));
+        tasks = tasks.map((task, index) => (index === taskIndex) ? ({ ...task, done: !task.done }) : ({ ...task }));
         render();
     };
 
@@ -50,7 +41,7 @@
         })
     }
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -65,7 +56,26 @@
         }
 
         document.querySelector(".js-taskList").innerHTML = htmlString;
+    };
 
+    const renderButtons = () => {
+        const buttonElement = document.querySelector(".js-formButtons");
+
+        if (!tasks.length) {
+            buttonElement.innerHTML = "";
+            return;
+        }
+
+        buttonElement.innerHTML = `
+                <button class="form__button">Ukryj ukończone</button>
+                <button class="form__button">Ukończ wszystkie</button>
+            `;
+    }
+
+    const render = () => {
+
+        renderTasks();
+        renderButtons();
         bindEvents();
     }
 
