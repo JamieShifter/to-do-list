@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
 
     const removeTask = (taskIndex) => {
         tasks = [
@@ -17,6 +18,17 @@
 
         render();
     }
+
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        console.log(hideDoneTasks);
+        render();
+    }
+
+    const toggleMarkAllTasksDone = () => {
+        tasks = tasks.map(tasks => ({...tasks, done: true}));
+        render();
+    };
 
     const toggleTaskDone = (taskIndex) => {
         tasks = tasks.map((task, index) => (index === taskIndex) ? ({ ...task, done: !task.done }) : ({ ...task }));
@@ -39,6 +51,14 @@
                 toggleTaskDone(index);
             })
         })
+
+        const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
+        const markAllTasksDoneButton = document.querySelector(".js-markAllTasksDone");
+
+        if (hideDoneTasksButton && markAllTasksDoneButton) {
+            hideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+            markAllTasksDoneButton.addEventListener("click", toggleMarkAllTasksDone);
+        }
     }
 
     const renderTasks = () => {
@@ -67,8 +87,8 @@
         }
 
         buttonElement.innerHTML = `
-                <button class="form__button">Ukryj ukończone</button>
-                <button class="form__button">Ukończ wszystkie</button>
+                <button class="form__button js-hideDoneTasks">Ukryj ukończone</button>
+                <button class="form__button js-markAllTasksDone">Ukończ wszystkie</button>
             `;
     }
 
