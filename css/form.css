@@ -60,3 +60,36 @@
     background-color: rgb(44, 202, 202);
 }
 
+.form__button {
+    background-color: inherit;
+    color: teal;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .form__button {
+        padding: 15px;
+    }
+}
+
+
+.form__container--withButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .form__container--withButtons {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .form__buttons {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding-top: 20px;
+    }
+}

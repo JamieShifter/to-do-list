@@ -21,7 +21,6 @@
 
     const toggleHideDoneTasks = () => {
         hideDoneTasks = !hideDoneTasks;
-        console.log(hideDoneTasks);
         render();
     }
 
