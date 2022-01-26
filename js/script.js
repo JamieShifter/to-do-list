@@ -87,7 +87,7 @@
 
         buttonElement.innerHTML = `
                 <button class="form__button js-hideDoneTasks">${ hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-                <button class="form__button js-markAllTasksDone ${(tasks.every(({done}) => done)) ? "disabled" : ""}">Ukończ wszystkie</button>
+                <button class="form__button js-markAllTasksDone"${(tasks.every(({done}) => done)) ? " disabled" : ""}>Ukończ wszystkie</button>
             `;
     }
 

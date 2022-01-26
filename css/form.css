@@ -43,6 +43,7 @@
     font-family: inherit;
     border: none;
     padding: 0 20px;
+    transition: 1s;
 }
 
 @media (max-width: 767px) {
@@ -53,6 +54,7 @@
 }
 
 .form__submit:hover {
+    transform: scale(1.1);
     background-color: rgb(17, 170, 170);
 }
 
@@ -64,6 +66,15 @@
     background-color: inherit;
     color: teal;
     border: none;
+    transition: 0.5s;
+}
+
+.form__button:hover {
+    color: rgb(15, 163, 163);
+}
+
+.form__button:disabled {
+    color: gray;
 }
 
 @media (max-width: 767px) {

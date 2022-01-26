@@ -31,6 +31,7 @@
     background-color: green;
     color: white;
     border: none;
+    transition: 1s;
 }
 
 .taskList__button:hover {
@@ -57,3 +58,6 @@
     background-color: rgb(255, 81, 116);
 }
 
+.taskList__item--hidden {
+    display: none;
+}
